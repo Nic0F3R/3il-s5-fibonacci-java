@@ -26,4 +26,10 @@ public class TestFibonacci {
 		assertEquals("[1=1;2=1;3=2]", fib1.toString());
 	}
 	
+	@Test
+	void testFibonacci4() {
+		Fibonacci fib1 = new Fibonacci(4);
+		assertEquals("[1=1;2=1;3=2;4=3]", fib1.toString());
+	}
+	
 }
