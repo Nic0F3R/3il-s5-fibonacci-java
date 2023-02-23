@@ -1,11 +1,12 @@
 package testfibonacci;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import fibonacci.Fibonacci;
 import junit.framework.TestCase;
 
-public class TestFibonacci extends TestCase {
+public class TestFibonacci {
 
 	@Test
 	void testFibonacci1() {

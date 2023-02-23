@@ -8,4 +8,12 @@ public class Fibonacci {
 		this.iterateur = new FiboIterator(pfBorne);
 	}
 	
+	/**
+	 * Permettra de retourner une chaîne au format "[1=1;2=1;3=2]"
+	 */
+	@Override
+	public String toString() {
+		return "[1=1]";
+	}
+	
 }
