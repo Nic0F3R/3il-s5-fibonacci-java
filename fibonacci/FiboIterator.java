@@ -1,6 +1,8 @@
 package fibonacci;
 
-public class FiboIterator {
+import java.util.Iterator;
+
+public class FiboIterator implements Iterator<Integer> {
 
 	// Borne maximale
 	private int borne;
@@ -20,4 +22,29 @@ public class FiboIterator {
 		this.actuel = 1;
 		this.rang = 0;
 	}
+	
+	@Override
+	public boolean hasNext() {
+		return this.rang < this.borne;
+	}
+
+	@Override
+	public Integer next() {
+		
+		int res;
+		
+		if(rang == 0 || rang == 1) {
+			res = 1;
+		} else {
+			res = this.precedent + actuel;
+			this.precedent = this.actuel;
+			this.actuel = res;
+		}
+		
+		this.rang++;
+		
+		return res;
+		
+	}
+	
 }
